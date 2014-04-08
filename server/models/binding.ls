@@ -16,6 +16,7 @@ module.exports = sequelize.define 'Binding' do
   token:
     type: Sequelize.STRING
     null: false
+    unique: true
   userEmail:
     type: Sequelize.STRING
     null: false

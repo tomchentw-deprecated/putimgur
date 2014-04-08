@@ -35,10 +35,12 @@
     "q": "^1.0.0",
     "pg": "^2.11.1",
     "sequelize": "^1.7.0",
+    "through2": "^0.4.1",
     "request": "^2.34.0",
     "express": "^3.4.8",
     "express-promise": "^0.1.9",
-    "newrelic": "^1.4.0"
+    "newrelic": "^1.4.0",
+    "buffertools": "^2.1.2"
   },
   "devDependencies": {
     "bower": "^1.2.8",

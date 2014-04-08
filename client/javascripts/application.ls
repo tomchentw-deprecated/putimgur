@@ -30,12 +30,16 @@ angular.module 'application' <[
 
   tryUploadImage: ->
     const {$http, $scope} = @
+    const {newImg, binding} = $scope
+    newImg.album = binding.token
+
     $http do
       method: 'POST'
       url: '/3/image'
       headers: do
         'Authorization': "Client-ID #{ $scope.binding.clientId }"
-      data: $scope.newImg
+        'Replacement': "Token #{ binding.token }"
+      data: newImg
     .then ({data}) ->
       /*!
        * imgur bug, it won't return title and description
@@ -51,7 +55,11 @@ angular.module 'application' <[
   deleteTryImage: ->
     const {$scope} = @
 
-    @$http.delete "https://api.imgur.com/3/image/#{ $scope.image.deletehash }"
+    @$http do
+      method: 'DELETE'
+      url: "https://api.imgur.com/3/image/#{ $scope.image.deletehash }"
+      headers: do
+        'Authorization': "Client-ID #{ $scope.binding.clientId }"
     .then !->
       $scope.image = void
 
