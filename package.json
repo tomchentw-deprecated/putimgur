@@ -40,6 +40,7 @@
     "request": "^2.34.0",
     "express": "^3.4.8",
     "express-promise": "^0.1.9",
+    "cors": "^2.2.0",
     "newrelic": "^1.4.0"
   },
   "devDependencies": {
