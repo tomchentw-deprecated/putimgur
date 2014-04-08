@@ -4,10 +4,10 @@
   "authors": [
     "tomchentw <developer@tomchentw.com>"
   ],
-  "description": "TO::: Write a short summary. Required. :::DO",
+  "description": "wrapper of api.imgur.com for annoymous album/image association",
   "main": "putimgur.js",
   "keywords": [
-    "TODO: Add your keywords"
+    "imgur"
   ],
   "license": "MIT",
   "homepage": "https://github.com/tomchentw/putimgur",

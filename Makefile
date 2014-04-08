@@ -1,11 +1,11 @@
 bin           := ./node_modules/.bin
 gulp					:= $(bin)/gulp --require LiveScript --cwd ./
 
-releaseBranch := gh-pages
-developBranch := master
+releaseBranch := master
+developBranch := develop
 
 testDeps			:= test.karma test.protractor# test.mocha
-releaseStatic	:= true
+releaseStatic	:= false
 publishDeps		:= publish.git publish.bower# publish.gems publish.npm
 
 tempFolder    := $(shell mktemp -d -t $(shell basename "$PWD"))
