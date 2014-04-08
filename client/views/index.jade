@@ -10,12 +10,13 @@ html(ng-app="application")
   body
     include partials/header
     div(role="main")
-      .container
+      .container(ng-controller="IndexCtrl as index" )
         .row
-          form(role="form" name="bindingForm" ng-controller="IndexCtrl as index" ng-submit="index.submit()")
+          h2 Register a token
+          form(role="form" name="bindingForm" ng-submit="index.submit()")
             .form-group
-              label Step 1. Set your imgur.com client id
-              input.form-control(type="text" name="clientId" ng-model="binding.clientId" required)
+              label(for="binding_client_id") Step 1. Set your imgur.com client id
+              input#binding_client_id.form-control(type="text" name="clientId" ng-model="binding.clientId" required)
             .form-group(ng-show="bindingForm.clientId.$dirty && binding.clientId")
               label Step 2. Create annoymous album at imgur.com
               button.btn.btn-default(type="button" ng-click="index.createAlbum()") Go
@@ -26,13 +27,41 @@ html(ng-app="application")
                   input.form-control(type="text" name="albumDeleteHash" ng-model="binding.albumDeleteHash" required readonly)
             label Step 3. Submit these info to us
             .form-group(ng-show="binding.albumId && binding.albumDeleteHash")
-              label Your Email
-              input.form-control(type="text" name="userEmail" ng-model="binding.userEmail" required)
+              label(for="binding_user_email") Your Email
+              input#binding_user_email.form-control(type="text" name="userEmail" ng-model="binding.userEmail" required)
 
             button.btn.btn-primary(type="submit" ng-show="bindingForm.userEmail.$dirty && binding.userEmail") Send
             .form-group(ng-show="binding.token")
-              label Step 4. Get the generated token for this album
-              input.form-control(type="text" name="token" ng-model="binding.token" readonly)
+              label(for="binding_token") Step 4. Get the generated token for this album
+              input#binding_token.form-control(type="text" name="token" ng-model="binding.token" readonly)
+
+        .row(ng-show="binding.token")
+          h2 Try upload using the generated token
+          form(role="form" name="tryForm" ng-submit="index.tryUploadImage()")
+            .form-group
+              label(for="image_title") Title
+              input#image_title.form-control(type="text" ng-model="newImg.title")
+
+            .form-group
+              label(for="image_description") Description
+              textarea#image_description.form-control(ng-model="newImg.description")
+
+            .form-group
+              label(for="image_file") Image File
+              input#image_file(type="file" ng-model="newImg.image" required)
+
+            button.btn.btn-info.pull-right(type="submit") Try Upload
+        .row
+          .col-xs-12.col-sm-6.col-sm-offset-3
+            .thumbnail
+              img(ng-hide="image" src="http://placekitten.com/320/240")
+              img(ng-show="image" ng-src="{{ image.link }}")
+              .caption(ng-show="image")
+                h3(ng-bind="image.title")
+                p(ng-bind="image.description")
+                p
+                  button.btn.btn-primary(ng-click="index.deleteTryImage()") Delete Image
+
 
     include partials/footer
     

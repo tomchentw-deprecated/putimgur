@@ -139,6 +139,7 @@ gulp.task 'client:js' <[ client:templates client:js:ls client:js:bower_component
     'bower_components/angular/angular.min.js'
     'bower_components/angular-sanitize/angular-sanitize.min.js'
     'bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js'
+    'bower_components/ng-form-data/ng-form-data.min.js'
     'tmp/.js-cache/*.js'
   ]
   .pipe gulp-concat 'application.js'

@@ -35,6 +35,7 @@
     "angular-sanitize": "~1.2.13",
     "angular-mocks": "~1.2.13",
     "angular-bootstrap": "~0.10.0",
-    "twbs-bootstrap-sass": "~3.1.1"
+    "twbs-bootstrap-sass": "~3.1.1",
+    "ng-form-data": "~0.0.1"
   }
 }
