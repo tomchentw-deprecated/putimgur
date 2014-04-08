@@ -1,0 +1,38 @@
+doctype html
+html(ng-app="application")
+  head
+    meta(charset="utf-8")
+    base(href="/")
+    title putimgur
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0")
+    link(rel="stylesheet" href=stylesheetLinkTag("application.css"))
+    script(type="text/javascript" defer src=javascriptIncludeTag("application.js"))
+  body
+    include partials/header
+    div(role="main")
+      .container
+        .row
+          form(role="form" name="bindingForm" ng-controller="IndexCtrl as index" ng-submit="index.submit()")
+            .form-group
+              label Step 1. Set your imgur.com client id
+              input.form-control(type="text" name="clientId" ng-model="binding.clientId" required)
+            .form-group(ng-show="bindingForm.clientId.$dirty && binding.clientId")
+              label Step 2. Create annoymous album at imgur.com
+              button.btn.btn-default(type="button" ng-click="index.createAlbum()") Go
+              .row
+                .col-xs-6
+                  input.form-control(type="text" name="albumId" ng-model="binding.albumId" required readonly)
+                .col-xs-6
+                  input.form-control(type="text" name="albumDeleteHash" ng-model="binding.albumDeleteHash" required readonly)
+            label Step 3. Submit these info to us
+            .form-group(ng-show="binding.albumId && binding.albumDeleteHash")
+              label Your Email
+              input.form-control(type="text" name="userEmail" ng-model="binding.userEmail" required)
+
+            button.btn.btn-primary(type="submit" ng-show="bindingForm.userEmail.$dirty && binding.userEmail") Send
+            .form-group(ng-show="binding.token")
+              label Step 4. Get the generated token for this album
+              input.form-control(type="text" name="token" ng-model="binding.token" readonly)
+
+    include partials/footer
+    

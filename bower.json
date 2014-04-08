@@ -1,0 +1,40 @@
+{
+  "name": "putimgur",
+  "version": "0.0.0",
+  "authors": [
+    "tomchentw <developer@tomchentw.com>"
+  ],
+  "description": "TO::: Write a short summary. Required. :::DO",
+  "main": "putimgur.js",
+  "keywords": [
+    "TODO: Add your keywords"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/tomchentw/putimgur",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "app",
+    "bower_components",
+    "client",
+    "config",
+    "lib",
+    "node_modules",
+    "pkg",
+    "public",
+    "server",
+    "test",
+    "tmp",
+    "gulpfile.ls",
+    "index.ls",
+    "Makefile",
+    "package.json"
+  ],
+  "devDependencies": {
+    "angular": "~1.2.13",
+    "angular-sanitize": "~1.2.13",
+    "angular-mocks": "~1.2.13",
+    "angular-bootstrap": "~0.10.0",
+    "twbs-bootstrap-sass": "~3.1.1"
+  }
+}
