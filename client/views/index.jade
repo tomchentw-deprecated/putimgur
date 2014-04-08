@@ -25,7 +25,8 @@ html(ng-app="application")
                   input.form-control(type="text" name="albumId" ng-model="binding.albumId" required readonly)
                 .col-xs-6
                   input.form-control(type="text" name="albumDeleteHash" ng-model="binding.albumDeleteHash" required readonly)
-            label Step 3. Submit these info to us
+            label(ng-show="binding.albumId && binding.albumDeleteHash")
+              | Step 3. Submit these info to us
             .form-group(ng-show="binding.albumId && binding.albumDeleteHash")
               label(for="binding_user_email") Your Email
               input#binding_user_email.form-control(type="text" name="userEmail" ng-model="binding.userEmail" required)
@@ -51,12 +52,12 @@ html(ng-app="application")
               input#image_file(type="file" ng-model="newImg.image" required)
 
             button.btn.btn-info.pull-right(type="submit") Try Upload
-        .row
+        .row(ng-show="newImg")
           .col-xs-12.col-sm-6.col-sm-offset-3
             .thumbnail
               img(ng-hide="image" src="http://placekitten.com/320/240")
               img(ng-show="image" ng-src="{{ image.link }}")
-              .caption(ng-show="image")
+              .caption
                 h3(ng-bind="image.title")
                 p(ng-bind="image.description")
                 p
