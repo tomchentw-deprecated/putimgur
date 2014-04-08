@@ -1,5 +1,5 @@
 # putimgur
-> Boilerplate for AngularJS *Single Page Application* by Tom Chen
+> wrapper of api.imgur.com for annoymous album/image association
 
 [![Travis CI   ](https://img.shields.io/travis/tomchentw/putimgur/master.svg)             ](https://travis-ci.org/tomchentw/putimgur)
 [![Quality     ](https://img.shields.io/codeclimate/github/tomchentw/putimgur.svg)        ](https://codeclimate.com/github/tomchentw/putimgur)
