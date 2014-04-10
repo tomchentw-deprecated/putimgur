@@ -1,5 +1,4 @@
 angular.module 'application' <[
-  ngSanitize
   ui.bootstrap
   ng-form-data
 ]>
