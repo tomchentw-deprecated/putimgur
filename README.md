@@ -1,10 +1,10 @@
 # putimgur
 > wrapper of api.imgur.com for annoymous album/image association
 
-[![Travis CI   ](https://img.shields.io/travis/tomchentw/putimgur/master.svg)             ](https://travis-ci.org/tomchentw/putimgur)
-[![Quality     ](https://img.shields.io/codeclimate/github/tomchentw/putimgur.svg)        ](https://codeclimate.com/github/tomchentw/putimgur)
-[![Coverage    ](https://img.shields.io/coveralls/tomchentw/putimgur.svg)                 ](https://coveralls.io/r/tomchentw/putimgur)
-[![Dependencies](https://img.shields.io/gemnasium/tomchentw/putimgur.svg)                 ](https://gemnasium.com/tomchentw/putimgur)
+[![Travis CI   ](https://travis-ci.org/travis/tomchentw/putimgur/master.svg?branch=master)          ](https://travis-ci.org/tomchentw/putimgur)
+[![Quality     ](https://img.shields.io/codeclimate/github/tomchentw/putimgur.svg)                  ](https://codeclimate.com/github/tomchentw/putimgur)
+[![Coverage    ](https://img.shields.io/coveralls/tomchentw/putimgur.svg)                           ](https://coveralls.io/r/tomchentw/putimgur)
+[![Dependencies](https://gemnasium.com/gemnasium/tomchentw/putimgur.svg)                            ](https://gemnasium.com/tomchentw/putimgur)
 
 
 ## Project philosophy

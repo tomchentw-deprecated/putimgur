@@ -1,5 +1,6 @@
 angular.module 'application' <[
   ui.bootstrap
+  ga
   ng-form-data
 ]>
 .controller 'IndexCtrl' class
