@@ -45,12 +45,13 @@ angular.module 'application' <[
        * imgur bug, it won't return title and description
        * need to get it again
        */
+      const image = data.data
       $http do
-        url: "https://api.imgur.com/3/image/#{ data.data.id }"
+        url: "https://api.imgur.com/3/image/#{ image.id }"
         headers: do
           'Authorization': "Client-ID #{ $scope.binding.clientId }"
-    .then !({data}) ->
-      $scope.image = data.data
+      .then ({data}) -> angular.extend image, data.data
+    .then !($scope.image) ->
 
   deleteTryImage: ->
     const {$scope} = @
