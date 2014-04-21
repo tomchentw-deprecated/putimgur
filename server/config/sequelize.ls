@@ -3,7 +3,7 @@ require! {
 }
 
 const secret = do
-  name: 'ioh-cover-maker'
+  name: 'putimgur'
   username: void
   password: void
 
