@@ -1,4 +1,5 @@
 const Koa = require("koa");
+const cors = require("@koa/cors");
 const Sequelize = require("sequelize");
 const fetch = require("node-fetch");
 const replace = require("stream-buffer-replace");
@@ -20,6 +21,7 @@ const Binding = sequelize.define("Binding", {
 
 const app = new Koa();
 
+app.use(cors());
 app.use(async ctx => {
   if (
     ctx.method !== "POST" ||
