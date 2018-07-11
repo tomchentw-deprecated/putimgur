@@ -1,74 +1,21 @@
 {
   "name": "putimgur",
-  "version": "0.0.0",
-  "description": "wrapper of api.imgur.com for annoymous album/image association",
-  "longDescription": "wrapper of api.imgur.com for annoymous album/image association",
-  "main": "index.ls",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tomchentw/putimgur"
-  },
-  "keywords": [
-    "imgur"
-  ],
-  "author": {
-    "name": "tomchentw",
-    "email": "developer@tomchentw.com",
-    "url": "https://github.com/tomchentw"
-  },
-  "license": {
-    "type": "MIT",
-    "url": "http://tomchentw.mit-license.org"
-  },
-  "bugs": {
-    "url": "https://github.com/tomchentw/tc-spa-boilerplate/issues"
-  },
-  "homepage": "https://github.com/tomchentw/tc-spa-boilerplate",
-  "engines": {
-    "node": "0.10.x"
-  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "make server"
+    "start": "node index.js",
+    "test": "jest"
   },
+  "author": "",
+  "license": "MIT",
   "dependencies": {
-    "LiveScript": "~1.2.0",
-    "bower": "^1.2.8",
-    "q": "^1.0.0",
-    "pg": "^2.11.1",
-    "sequelize": "^1.7.0",
-    "through2": "^0.4.1",
-    "buffertools": "^2.1.2",
-    "request": "^2.34.0",
-    "express": "^3.4.8",
-    "express-promise": "^0.1.9",
-    "cors": "^2.2.0",
-    "newrelic": "^1.4.0",
-    "highlight.js": "^8.0.0",
-    "gulp": "^3.5.2",
-    "gulp-livescript": "^0.2.0",
-    "gulp-uglify": "^0.2.1",
-    "gulp-angular-templatecache": "^1.1.0",
-    "gulp-jade": "^0.5.0",
-    "gulp-sass": "^0.7.1",
-    "gulp-minify-css": "^0.3.0",
-    "gulp-concat": "^2.1.7",
-    "gulp-rev": "^0.3.2"
-  },
-  "devDependencies": {
-    "tiny-lr": "0.0.5",
-    "gulp-bump": "^0.1.4",
-    "gulp-conventional-changelog": "^0.1.2",
-    "gulp-livereload": "^1.1.1",
-    "gulp-nodemon": "^1.0.2",
-    "coveralls": "^2.8.0",
-    "protractor": "^0.21.0",
-    "karma": "^0.12.9",
-    "karma-live-preprocessor": "^0.2.2",
-    "karma-script-launcher": "^0.1.0",
-    "karma-chrome-launcher": "^0.1.2",
-    "karma-firefox-launcher": "^0.1.3",
-    "karma-jasmine": "^0.2.2",
-    "karma-phantomjs-launcher": "^0.1.2",
-    "karma-coverage": "^0.2.0"
+    "form-data": "^2.3.2",
+    "jest": "^23.4.0",
+    "koa": "^2.5.1",
+    "node-fetch": "^2.1.2",
+    "pg": "^7.4.3",
+    "sequelize": "^4.38.0",
+    "stream-buffer-replace": "^1.0.1"
   }
 }
